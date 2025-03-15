@@ -23,9 +23,24 @@ const contadorUsuario = document.getElementById('contador-usuario');
 const contadorOrdenador = document.getElementById('contador-ordenador');
 
 
-console.log(contadorOrdenador);
+function iniciarTurno(e) {
+    let eleccionPc = Math.floor(Math.random()*3);
+    let eleccionUsuario = e.currentTarget.id;
+    if (eleccionPc === 0) { eleccionPc = 'piedra';
+    } else if (eleccionPc === 1) { eleccionPc = 'papel';
+    } else { eleccionPc = 'tijera';}
+}
 
-
+/*if
+(eleccionUsuario === 'piedra' && eleccionPc === 'tijera')
+|| (eleccionUsuario === 'papel' && eleccionPc === 'piedra')||
+(eleccionUsuario === 'tijera'&& eleccionPc === 'papel')
+{ganaUsuario();}
+else if
+(eleccionPc === 'piedra'&& eleccionUsuario === 'tijera') || (eleccionPc === 'papel' && eleccionUsuario === 'piedra') ||
+(eleccionPc === 'tijera'&& eleccionUsuario === 'papel')
+{ganaPc();}
+else {empate();}*/
 
 
 
